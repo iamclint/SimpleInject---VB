@@ -30,12 +30,12 @@ Partial Class Form1
         Me.col1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.RefreshProcesses = New System.Windows.Forms.Timer(Me.components)
         Me.AutoInjTmr = New System.Windows.Forms.Timer(Me.components)
         Me.Filters = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.NotifyMessage = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DllBrowse64 = New System.Windows.Forms.Button()
@@ -96,10 +96,14 @@ Partial Class Form1
         Me.ColumnHeader1.Text = "ID"
         Me.ColumnHeader1.Width = 61
         '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "x86/x64"
+        '
         'RefreshProcesses
         '
         Me.RefreshProcesses.Enabled = True
-        Me.RefreshProcesses.Interval = 2000
+        Me.RefreshProcesses.Interval = 500
         '
         'AutoInjTmr
         '
@@ -129,10 +133,6 @@ Partial Class Form1
         '
         Me.NotifyMessage.Icon = CType(resources.GetObject("NotifyMessage.Icon"), System.Drawing.Icon)
         Me.NotifyMessage.Visible = True
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "x86/x64"
         '
         'Label2
         '
