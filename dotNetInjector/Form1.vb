@@ -106,7 +106,9 @@ Public Class Form1
         With ld
             .DefaultExt = ".dll"
             .Filter = "Dll Files|*.dll"
-            .InitialDirectory = My.Settings.FileToInject.Substring(0, My.Settings.FileToInject.LastIndexOf("\"))
+            If (My.Settings.FileToInject.LastIndexOf("\") > 0) Then
+                .InitialDirectory = My.Settings.FileToInject.Substring(0, My.Settings.FileToInject.LastIndexOf("\"))
+            End If
         End With
         If ld.ShowDialog = Windows.Forms.DialogResult.OK Then
             DllPath.Text = ld.FileName
@@ -169,7 +171,9 @@ Public Class Form1
         With ld
             .DefaultExt = ".dll"
             .Filter = "Dll Files|*.dll"
-            .InitialDirectory = My.Settings.FileToInject64.Substring(0, My.Settings.FileToInject64.LastIndexOf("\"))
+            If (My.Settings.FileToInject64.LastIndexOf("\") > 0) Then
+                .InitialDirectory = My.Settings.FileToInject64.Substring(0, My.Settings.FileToInject64.LastIndexOf("\"))
+            End If
         End With
         If ld.ShowDialog = Windows.Forms.DialogResult.OK Then
             DllPath64.Text = ld.FileName
