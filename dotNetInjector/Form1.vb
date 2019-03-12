@@ -13,7 +13,7 @@ Public Class Form1
     End Structure
     Public Processes As New Dictionary(Of Integer, Proc)
     <DllImport("libinj.dll", SetLastError:=True, CallingConvention:=CallingConvention.Cdecl)>
-    Public Shared Function is32bit(ByVal process_id As Integer) As Boolean
+    Public Shared Function Is32Bit(ByVal process_id As Integer) As Boolean
     End Function
     <DllImport("libinj.dll", SetLastError:=True, CallingConvention:=CallingConvention.Cdecl)>
     Public Shared Function Inject(ByVal process_id As Integer, ByVal dll As String, ByVal method As Integer, Optional ByVal handle As IntPtr = Nothing) As Boolean
